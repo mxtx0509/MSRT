@@ -83,17 +83,7 @@ def get_loader(adj_dir, feature_dir,txt_dir,SIZE):
     test_loader = DataLoader(dataset=test_set, num_workers=args.workers,
                             batch_size=args.batch_size*10, shuffle=False)
     return train_loader , test_loader
-# def get_loader(adj_dir, feature_dir,json_dir):
-    # train_list = '/export/home/cjw/zm/test/cvpr2019/list_5000/train_split0.txt'
-    # test_list = '/export/home/cjw/zm/test/cvpr2019/list_5000/test_split0.txt'
 
-    # train_set = SRDataset(feature_dir=feature_dir,json_dir=json_dir, file_list = train_list,adj_size=SIZE,graph_mode=args.graph_mode,Threshold=args.threshold)
-    # test_set = SRDataset( feature_dir=feature_dir,json_dir=json_dir, file_list = test_list,adj_size=SIZE,graph_mode=args.graph_mode,Threshold=args.threshold)
-    # train_loader = DataLoader(dataset=train_set, num_workers=args.workers,
-                            # batch_size=args.batch_size, shuffle=True)
-    # test_loader = DataLoader(dataset=test_set, num_workers=args.workers,
-                            # batch_size=args.batch_size, shuffle=False)
-    # return train_loader , test_loader
 def main():
     SIZE = 40
     global args, best_prec1
