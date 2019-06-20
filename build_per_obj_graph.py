@@ -62,8 +62,6 @@ def build_obj_adj(rootdir,size):
         #print(len(vedio_objs_news))
         person_in_vedios = vedio_pers_frames[:40]
         object_in_vedios = vedio_objs_frames[:20]
-        #print(person_in_vedios)
-        #print(object_in_vedios)
         values = [0]*20
         count_obj_dic = dict(zip(frame_names,values))
         count_per_dic = dict(zip(frame_names,values))
